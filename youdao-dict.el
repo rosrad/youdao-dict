@@ -22,7 +22,7 @@
 	       (region-beginning) (region-end))
 	    (read-string
 	     (format SEARCH-PROMPT (current-word nil t))
-	     nil nil (current-word nil t))))
+	     (current-word nil t) nil (current-word nil t))))
     ;; drop the whitespace at start or end
     (setq word (when (string-match "^[ \t]*" word)
 		 (replace-match "" nil nil word)))
